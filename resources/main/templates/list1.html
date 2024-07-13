@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head th:insert="~{head.html}">
+    <meta charset="UTF-8">
+    <title>Shop List</title>
+    <div class="container">
+        <div th:insert="~{navbar.html}">
+        </div>
+    </div>
+</head>
+<body>
+<div class="container mt-3" style = "min-height: 800px">
+    <table class="table table-striped">
+        <thead>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>PRICE</th>
+        <th >AMOUNT</th>
+        <th style="width:11%">SELECT</th>
+        </thead>
+        <tbody>
+        <tr th:each="it, iStat : ${product1}">
+            <td th:text="${it.id}"></td>
+            <td th:text="${it.name}"></td>
+            <td th:text="${it.price}"></td>
+            <td th:text="${it.amount}"></td>
+            <td>
+                <a class="btn btn-primary" th:href="@{/description1(index=${iStat.index})}" style="width: 100px">
+                    GO
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

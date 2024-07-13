@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th = "http://www.thymeleaf.org">
+<head th:insert="~{head.html}">
+    <meta charset="UTF-8">
+    <div class="container">
+        <div th:insert="~{navbar.html}">
+        </div>
+    </div>
+    <title>Shop</title>
+</head>
+<body>
+<div class="container" th:style="'text-align : center; margin-top: 50px;'">
+    <div >
+   <h1>
+       This is Tulpar SHOP
+   </h1>
+</div>
+
+    <div style="margin-top: 30px">
+        <h3>
+        Categories
+    </h3>
+        <h1>↓</h1>
+    </div>
+
+
+    <div class="d-flex justify-content-evenly" th:style="'text-align : center; margin-top: 30px'">
+        <div >
+            <div class="shadow p-3 mb-5 bg-body-tertiary rounded"><div class="img-overlay">MAL</div>
+        <a th:href="@{'/list'}">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/A_well-developed_Texel_lamb_-_geograph.org.uk_-_767722.jpg/200px-A_well-developed_Texel_lamb_-_geograph.org.uk_-_767722.jpg" alt="Image" class="img-thumbnail" th:style="'width: 200px; height: 130px;'">
+        </a>
+            </div>
+    </div>
+        <div >
+        <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+            <div class="img-overlay">WEAPONS</div>
+            <a th:href="@{'/list1'}">
+                <img src="https://coldsteels.ru/image/cache/catalog/Produkts/noj-cold-steel-warrior-o-tanto-cs_88bt-1-1500x1500.jpg" alt="Image" class="img-thumbnail" th:style="'width: 200px; height: 130px;'">
+            </a>
+        </div>
+    </div>
+        <div >
+            <div class="shadow p-3 mb-5 bg-body-tertiary rounded"><div class="img-overlay">CLOTHES</div>
+            <a th:href="@{'/list2'}">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUFB11qxvn5B5HvafRbWECNqXUL7WihiC6ng&s" alt="Image" class="img-thumbnail" th:style="'width: 200px; height: 130px;'">
+            </a>
+            </div>
+        </div>
+
+    </div>
+    <div class="d-flex justify-content-sm-evenly" th:style="'text-align : center; margin-top: 10px'">
+        <div >
+            <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <div class="img-overlay">CARS</div>
+                <a th:href="@{'/list3'}">
+                    <img src="https://almaty.hyundai.kz/userdata/rubrics/rubrics_415/icon_s.webp?1697524835" alt="Image" class="img-thumbnail" th:style="'width: 200px; height: 130px;'">
+                </a>
+            </div>
+        </div>
+        <div >
+            <div class="shadow p-3 mb-5 bg-body-tertiary rounded">
+                <div class="img-overlay">SUT ONIMDERY</div>
+                <a th:href="@{'/list4'}">
+                    <img src="https://azbyka.kz/images/kazak/11.jpg" alt="Image" class="img-thumbnail" th:style="'width: 200px; height: 130px;'">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid" th:insert="~{footer.html}">
+</div>
+</body>
+</html>
